@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAUD Ceria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Efek rainbow terang + kelap kelip untuk semua teks */
+      .rainbow-text,
+      .rainbow-text-bright,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        background: linear-gradient(
+          90deg,
+          #ff0000,
+          #ff9900,
+          #ffff00,
+          #33cc33,
+          #3399ff,
+          #000000
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300% 300%;
+        animation: rainbowBright 3s linear infinite,
+          glow 1.5s ease-in-out infinite;
+      }
+
+      @keyframes rainbowBright {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          filter: brightness(1);
+        }
+        50% {
+          filter: brightness(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-sky-400 text-gray-800">
+    <!-- Header -->
+    <header class="bg-sky-500/90 shadow-sm sticky top-0 z-50 backdrop-blur">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-3">
+          <img
+            src="assets/logo_paud.png"
+            alt="Logo PAUD"
+            class="h-10 w-10 rounded-full shadow"
+          />
+          <h1 class="text-2xl font-bold text-white">PAUD SEANDANAN</h1>
+        </div>
+        <nav class="hidden md:flex space-x-6 font-semibold text-white">
+          <a href="#tentang" class="hover:opacity-80 transition">Tentang</a>
+          <a href="#program" class="hover:opacity-80 transition">Program</a>
+          <a href="#testimoni" class="hover:opacity-80 transition">Testimoni</a>
+          <a href="#kontak" class="hover:opacity-80 transition">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Banner Landscape -->
+    <section>
+      <img
+        src="assets/banner.png"
+        alt="Banner PAUD"
+        class="w-full h-auto object-contain"
+      />
+    </section>
+
+    <!-- Judul & Deskripsi -->
+    <section class="py-12 text-center bg-white/70 backdrop-blur-sm">
+      <h2 class="text-4xl md:text-6xl font-bold rainbow-text">
+        Belajar & Bermain Penuh Warna
+      </h2>
+      <p class="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
+        PAUD Ceria memberikan pengalaman belajar yang aman, menyenangkan, dan
+        kreatif untuk anak usia dini.
+      </p>
+      <a
+        href="#kontak"
+        class="mt-6 inline-block px-8 py-3 bg-yellow-400 text-gray-900 font-bold rounded-full shadow hover:bg-yellow-300 transition"
+      >
+        Daftar Sekarang
+      </a>
+    </section>
+
+    <!-- Tentang Kami -->
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-16">
+      <div
+        class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center"
+      >
+        <!-- Kolom Kiri: Informasi -->
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow">
+          <h3 class="text-3xl font-bold rainbow-text-bright">Tentang Kami</h3>
+          <p class="mt-4 text-gray-700 text-lg">
+            Kami fokus pada pengembangan karakter, kreativitas, dan kemandirian
+            anak melalui kegiatan belajar yang menyenangkan. Dengan guru-guru
+            berpengalaman dan lingkungan yang aman, kami memastikan setiap anak
+            berkembang optimal.
+          </p>
+        </div>
+
+        <!-- Kolom Kanan: Google Maps -->
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63516.7383303845!2d105.68269387067713!3d-5.742466622514785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41097284fac2db%3A0xc76cf157ab8951e0!2sTetaan%2C%20Kec.%20Penengahan%2C%20Kabupaten%20Lampung%20Selatan%2C%20Lampung!5e0!3m2!1sid!2sid!4v1754761875431!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program -->
+    <section id="program" class="py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-3xl font-bold rainbow-text text-center">
+          Program Kegiatan
+        </h3>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1588075592446-2661e15f3b33"
+              class="rounded-md mx-auto h-48 object-cover"
+              alt=""
+            />
+            <h4 class="mt-4 font-bold text-gray-800">Belajar Sambil Bermain</h4>
+            <p class="mt-2 text-sm text-gray-600">
+              Kegiatan interaktif yang membuat anak belajar dengan gembira.
+            </p>
+          </div>
+          <div
+            class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1"
+              class="rounded-md mx-auto h-48 object-cover"
+              alt=""
+            />
+            <h4 class="mt-4 font-bold text-gray-800">Seni & Kreativitas</h4>
+            <p class="mt-2 text-sm text-gray-600">
+              Mengasah imajinasi anak melalui seni, musik, dan kerajinan tangan.
+            </p>
+          </div>
+          <div
+            class="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee"
+              class="rounded-md mx-auto h-48 object-cover"
+              alt=""
+            />
+            <h4 class="mt-4 font-bold text-gray-800">Olahraga & Outbound</h4>
+            <p class="mt-2 text-sm text-gray-600">
+              Menjaga kesehatan fisik dan membangun kerja sama tim.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section id="testimoni" class="py-16">
+      <div
+        class="max-w-4xl mx-auto text-center px-4 bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow"
+      >
+        <h3 class="text-3xl font-bold rainbow-text">Testimoni Orang Tua</h3>
+        <div class="mt-8 space-y-6">
+          <blockquote class="bg-white/80 p-6 rounded-lg shadow">
+            <p class="italic text-gray-700">
+              "Anak saya jadi lebih percaya diri dan kreatif sejak masuk PAUD
+              Ceria."
+            </p>
+            <footer class="mt-2 text-sm font-semibold">— Ibu Siti</footer>
+          </blockquote>
+          <blockquote class="bg-white/80 p-6 rounded-lg shadow">
+            <p class="italic text-gray-700">
+              "Lingkungan belajarnya aman, bersih, dan gurunya sangat ramah."
+            </p>
+            <footer class="mt-2 text-sm font-semibold">— Bapak Budi</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-sky-500 text-white py-8">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h4 class="text-lg font-bold">Hubungi Kami</h4>
+        <p class="mt-2">Jl. Desa Tetaan KEC. Penengahan, KAB. LAM-SEL</p>
+        <p class="mt-4 text-sm">&copy; 2025 PAUD Seandanan</p>
+      </div>
+    </footer>
+  </body>
+</html>
